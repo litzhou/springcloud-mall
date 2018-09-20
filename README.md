@@ -25,8 +25,11 @@ docker-compose up -d
 
 #### step3
 
-- 注册中心： http://localhost:8080
-- 服务网关测试：http://localhost:8088/api/user, http://localhost:8088/api/goods
+- 注册中心：http://localhost:8080
+- 监控中心：http://localhost:9000
+- 服务网关：http://localhost:8088
+    - 调用用户服务： http://localhost:8088/api/user
+    - 调用商品服务： http://localhost:8088/api/goods
 
 
 
