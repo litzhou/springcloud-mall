@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-user
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://register-server:8080/eureka/
+
