@@ -1,11 +1,13 @@
 version: "2"
 services:
+  # 服务注册中心
   register-server:
     hostname: register-server
     build: register-server
     image: springcloud-mall/register-server
     ports:
       - "8080:8080"
+  # 用户相关服务
   service-user:
     build: service-user
     image: springcloud-mall/service-user
@@ -13,6 +15,7 @@ services:
       - "8090:8080"
     links:
       - "register-server"
+  # 商品相关服务
   service-goods:
       build: service-goods
       image: springcloud-mall/service-goods
@@ -28,6 +31,7 @@ services:
           - "8092:8080"
         links:
           - "register-server"
+  # 服务网关
   api-gateway:
       build: api-gateway
       image: springcloud-mall/api-gateway
