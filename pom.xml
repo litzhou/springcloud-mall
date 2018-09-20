@@ -62,6 +62,9 @@
     </build>
 
     <modules>
-        
+        <module>register-server</module>
+        <module>service-user</module>
+        <module>service-goods</module>
+        <module>api-gateway</module>
     </modules>
 </project>
