@@ -41,3 +41,11 @@ services:
         - "register-server"
         - "service-user"
         - "service-goods"
+  # 监控
+  app-monitor:
+      build: app-monitor
+      image: springcloud-mall/app-monitor
+      ports:
+        - "9000:8080"
+      links:
+        - "register-server"
