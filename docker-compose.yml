@@ -49,3 +49,6 @@ services:
         - "9000:8080"
       links:
         - "register-server"
+        - "service-user"
+        - "service-goods"
+        - "api-gateway"
