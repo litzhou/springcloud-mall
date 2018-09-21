@@ -33,5 +33,5 @@ docker-compose up -d
     
 ## 截图
 ### 架构图
-![img](/images/p1.png)
+![img](/images/p2.png)
 
