@@ -4,7 +4,7 @@
 - register-server eureka注册中心
 - service-goods 商品相关服务
 - service-user 用户相关服务
-- api-gateway api网关
+- api-gateway api网关、熔断、负载均衡
 - app-monitor 监控中心
 
 ## run
@@ -23,7 +23,7 @@ mvn clean package
 docker-compose up -d
 ```
 
-#### step3
+## 测试
 
 - 注册中心：http://localhost:8080
 - 监控中心：http://localhost:9000
