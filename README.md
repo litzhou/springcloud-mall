@@ -30,6 +30,8 @@ docker-compose up -d
 - 服务网关：http://localhost:8088
     - 调用用户服务： http://localhost:8088/api/user
     - 调用商品服务： http://localhost:8088/api/goods
-
-
+    
+## 截图
+### 架构图
+![img](/images/p1.png)
 
