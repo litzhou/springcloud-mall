@@ -1,0 +1,28 @@
+version: "2"
+services:
+  # mysql
+  mysql:
+    image: mysql:5.7
+    volumes:
+       - /tmp/db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    ports:
+      - "3308:3306"
+  # redis
+  redis:
+    image: redis
+    volumes:
+      - /tmp/redis_data:/data
+    restart: always
+    ports:
+      - "6379:6379"
+  # rabbitmq
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
