@@ -2,7 +2,6 @@ version: "2"
 services:
   # 服务注册中心
   register-server:
-    hostname: register-server
     build: register-server
     image: springcloud-mall/register-server
     ports:
@@ -11,41 +10,23 @@ services:
   service-user:
     build: service-user
     image: springcloud-mall/service-user
-    ports:
-      - "8090:8080"
-    links:
-      - "register-server"
   # 商品相关服务
   service-goods:
-      build: service-goods
-      image: springcloud-mall/service-goods
-      ports:
-        - "8091:8080"
-      links:
-        - "register-server"
-  # service-goods2 部署两个容器，实现负载均衡
+    build: service-goods
+    image: springcloud-mall/service-goods
+  # 商品相关服务2 部署两个容器，实现负载均衡
   service-goods2:
-        build: service-goods
-        image: springcloud-mall/service-goods
-        ports:
-          - "8092:8080"
-        links:
-          - "register-server"
+    image: springcloud-mall/service-goods
   # 服务网关
   api-gateway:
-      build: api-gateway
-      image: springcloud-mall/api-gateway
-      ports:
-        - "8088:8080"
-      links:
-        - "register-server"
-        - "service-user"
-        - "service-goods"
+    build: api-gateway
+    image: springcloud-mall/api-gateway
+    ports:
+      - "8088:8080"
   # 监控
   app-monitor:
-      build: app-monitor
-      image: springcloud-mall/app-monitor
-      ports:
-        - "9000:8080"
-      links:
-        - "register-server"
+    build: app-monitor
+    image: springcloud-mall/app-monitor
+    ports:
+      - "9000:8080"
+
