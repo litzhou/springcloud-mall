@@ -6,6 +6,8 @@
 - service-user 用户相关服务
 - api-gateway api网关、熔断、负载均衡
 - app-monitor 监控中心
+- core-lib 核心包
+- app-test 测试程序包
 
 ## run
 #### step0
