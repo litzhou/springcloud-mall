@@ -9,12 +9,15 @@ eureka:
 
 zuul:
   routes:
-    api-a:
+    api-user:
       path: /api/user/**
       serviceId: service-user
-    api-b:
+    api-goods:
       path: /api/goods/**
       serviceId: service-goods
+    api-test:
+      path: /api/test/**
+      serviceId: app-test
 
 management:
   endpoints:
