@@ -47,6 +47,10 @@
             <artifactId>guava</artifactId>
             <version>25.1-jre</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -76,5 +80,7 @@
         <module>service-goods</module>
         <module>api-gateway</module>
         <module>app-monitor</module>
+        <module>core-lib</module>
+        <module>app-test</module>
     </modules>
 </project>
