@@ -1,0 +1,15 @@
+version: "2"
+services:
+  # 服务注册中心
+  register-server:
+    build: register-server
+    image: springcloud-mall/register-server
+    ports:
+      - "8080:8080"
+  # 测试服务
+  app-test:
+    build: app-test
+    image: springcloud-mall/app-test
+    ports:
+      - "8082:8080"
+

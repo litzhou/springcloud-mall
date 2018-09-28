@@ -16,11 +16,22 @@
         <relativePath/>
     </parent>
 
+
+    <modules>
+        <module>register-server</module>
+        <module>service-user</module>
+        <module>service-goods</module>
+        <module>api-gateway</module>
+        <module>app-monitor</module>
+        <module>app-test</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <springcloud.mall.version>1.0-SNAPSHOT</springcloud.mall.version>
     </properties>
 
     <dependencies>
@@ -34,22 +45,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>25.1-jre</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
+            <groupId>com.dxy</groupId>
+            <artifactId>core-springcloud-mall-starter</artifactId>
+            <version>${springcloud.mall.version}</version>
         </dependency>
     </dependencies>
 
@@ -74,13 +72,17 @@
         </plugins>
     </build>
 
-    <modules>
-        <module>register-server</module>
-        <module>service-user</module>
-        <module>service-goods</module>
-        <module>api-gateway</module>
-        <module>app-monitor</module>
-        <module>core-lib</module>
-        <module>app-test</module>
-    </modules>
+    <repositories>
+        <repository>
+            <id>snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://localhost:8081/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://localhost:8081/content/repositories/releases</url>
+        </repository>
+    </repositories>
+
 </project>

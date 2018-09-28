@@ -28,11 +28,9 @@ services:
     build: app-monitor
     image: springcloud-mall/app-monitor
     ports:
-      - "9000:8080"
+      - "9001:8080"
   # 测试服务
   app-test:
     build: app-test
     image: springcloud-mall/app-test
-    ports:
-      - "8081:8080"
 

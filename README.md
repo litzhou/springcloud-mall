@@ -29,7 +29,7 @@ docker-compose up -d // 启动商城
 ## 测试
 
 - 注册中心：http://localhost:8080
-- 监控中心：http://localhost:9000
+- 监控中心：http://localhost:9001
 - 服务网关：http://localhost:8088
     - 测试用户服务：http://localhost:8088/api/user
     - 测试商品服务：http://localhost:8088/api/goods
