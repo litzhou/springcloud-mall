@@ -43,6 +43,13 @@ public class UserController {
         return "ok";
 
     }
+
+    @RequestMapping("/error")
+    public String testError() {
+        log.error("this is error test");
+        System.out.println(1 / 0);
+        return "true";
+    }
 }
 
  

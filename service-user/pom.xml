@@ -38,5 +38,10 @@
             <groupId>com.dxy</groupId>
             <artifactId>service-springcloud-mall-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.sentry</groupId>
+            <artifactId>sentry-logback</artifactId>
+            <version>1.7.10</version>
+        </dependency>
     </dependencies>
 </project>
