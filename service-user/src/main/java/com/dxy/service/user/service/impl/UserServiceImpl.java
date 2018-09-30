@@ -1,6 +1,6 @@
 package com.dxy.service.user.service.impl;
 
-import com.dxy.core.service.BaseServiceImpl;
+import com.dxy.service.impl.BaseServiceImpl;
 import com.dxy.service.user.model.User;
 import com.dxy.service.user.respostry.UserRepository;
 import com.dxy.service.user.service.UserService;

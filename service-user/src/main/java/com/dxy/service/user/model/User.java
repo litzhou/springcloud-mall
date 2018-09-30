@@ -1,12 +1,9 @@
 package com.dxy.service.user.model;
 
-import com.dxy.core.model.BaseModel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,14 +12,21 @@ import java.util.Date;
  * @author zhougaojun
  * @since 2018/09/27
  **/
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_user")
-public class User extends BaseModel implements Serializable {
+public class User implements Serializable {
 
-    private static final long serialVersionUID = 592195447373689232L;
+    private static final long serialVersionUID = 5903998208891703586L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(updatable = false)
+    private Date createTime;
+    private Date modifyTime;
 
     private String userName;
     private String password;

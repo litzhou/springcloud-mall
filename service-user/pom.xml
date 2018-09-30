@@ -34,5 +34,9 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.dxy</groupId>
+            <artifactId>service-springcloud-mall-starter</artifactId>
+        </dependency>
     </dependencies>
 </project>
