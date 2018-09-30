@@ -44,11 +44,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.dxy</groupId>
-            <artifactId>core-springcloud-mall-starter</artifactId>
-            <version>${springcloud.mall.version}</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -59,6 +54,21 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.dxy</groupId>
+                <artifactId>commons-springcloud-mall-starter</artifactId>
+                <version>${springcloud.mall.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dxy</groupId>
+                <artifactId>core-springcloud-mall-starter</artifactId>
+                <version>${springcloud.mall.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dxy</groupId>
+                <artifactId>service-springcloud-mall-starter</artifactId>
+                <version>${springcloud.mall.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
