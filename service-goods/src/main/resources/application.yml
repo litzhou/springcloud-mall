@@ -1,6 +1,16 @@
 spring:
   application:
     name: service-goods
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql:3306/test
+    username: root
+    password: root
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 
 eureka:
   client:
