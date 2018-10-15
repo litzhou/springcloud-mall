@@ -1,12 +1,13 @@
 # springcloud-mall
 学习搭建 springcloud 商城基础框架
+<br />
+依赖项目: https://github.com/litzhou/springcloud-mall-starter
 ## 说明
 - register-server eureka注册中心
 - service-goods 商品相关服务
 - service-user 用户相关服务
 - api-gateway api网关、熔断、负载均衡
 - app-monitor 监控中心
-- core-lib 核心包
 - app-test 测试程序包
 
 ## run
