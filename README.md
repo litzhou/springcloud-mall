@@ -1,7 +1,6 @@
 # springcloud-mall
 学习搭建 springcloud 商城基础框架
 <br />
-依赖项目: https://github.com/litzhou/springcloud-mall-starter
 
 ![img](/images/p3.png)
 ### 模块说明
@@ -13,6 +12,13 @@
 - app-test 测试程序包
 
 ### run
+#### step0：clone 依赖包
+依赖项目: https://github.com/litzhou/springcloud-mall-starter
+```json
+git clone https://github.com/litzhou/springcloud-mall-starter.git
+cd ~/springcloud-mall-starter
+mvn install
+```
 #### step1：clone 代码到本地
 ```json
 git clone https://github.com/litzhou/springcloud-mall.git
