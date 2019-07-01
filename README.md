@@ -2,7 +2,9 @@
 学习搭建 springcloud 商城基础框架
 <br />
 依赖项目: https://github.com/litzhou/springcloud-mall-starter
-## 说明
+
+![img](/images/p3.png)
+### 模块说明
 - register-server eureka注册中心
 - service-goods 商品相关服务
 - service-user 用户相关服务
@@ -10,24 +12,24 @@
 - app-monitor 监控中心
 - app-test 测试程序包
 
-## run
-#### step0
+### run
+#### step1：clone 代码到本地
 ```json
 git clone https://github.com/litzhou/springcloud-mall.git
 cd ~/springcloud-mall
 ```
-#### step1
+#### step2：编译打包
 ```
 mvn clean package
 ```
-#### step2
+#### step3：docker 一键启动
 
 ```
 docker-compose -f docker-compose.before.yml up -d // 启动mysql、redis、rabbitmq
 docker-compose up -d // 启动商城
 ```
 
-## 测试
+### 测试
 
 - 注册中心：http://localhost:8080
 - 监控中心：http://localhost:9001
@@ -43,8 +45,3 @@ docker-compose up -d // 启动商城
         - http://localhost:8088/api/test/user/update?id=2&name=lisi // 修改id为2的用户
     - 测试rabbitmq: 
         - http://localhost:8088/api/test/rabbitmq/send?message=hello // 结果请查看控制台日志
-    
-## 截图
-### 架构图
-![img](/images/p3.png)
-
