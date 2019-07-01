@@ -1,5 +1,5 @@
 # springcloud-mall
-学习搭建 springcloud 商城基础框架
+学习搭建 springcloud 商城基础框架。
 <br />
 
 ![img](/images/p3.png)
